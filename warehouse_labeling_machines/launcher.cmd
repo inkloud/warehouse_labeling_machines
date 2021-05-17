@@ -1,2 +1,2 @@
 PowerShell -Command "Set-ExecutionPolicy Unrestricted" >> "%TEMP%\StartupLog.txt" 2>&1
-PowerShell -windowstyle hidden "C:\Users\simon\Desktop\Progetti\warehouse_labeling_machines\warehouse_labeling_machines\launch_server.ps1" 
+PowerShell -windowstyle hidden "C:\Users\sdelg\Desktop\warehouse_labeling_machines\warehouse_labeling_machines\launch_server.ps1" 

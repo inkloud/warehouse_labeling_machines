@@ -38,4 +38,5 @@ To launch the server execute ```launch_server.ps1```
 1. Download the repo
 2. launch ```.\python-3.9.4-embed-amd64\get-pip.py```
 3. Check the ```launch_server.ps1``` file and the correct port set 
-4. create a link of ```launcher.cmd``` and put it in the folder ```C:\Users\{username}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup```. This guarantee that the printer is launching at the pc reboot
+4. Copy the complete path of ```launch_server.ps1``` as the params of the last command
+5. create a link of ```launcher.cmd``` and put it in the folder ```C:\Users\{username}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup```. This guarantee that the printer is launching at the pc reboot
