@@ -1,0 +1,7 @@
+__pycache__
+.vscode
+*.db
+node_modules
+*.pdf
+Lib
+Scripts
