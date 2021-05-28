@@ -9,3 +9,4 @@ label_writer_450 = Blueprint(
 )
 
 from . import views
+from . import zpl
