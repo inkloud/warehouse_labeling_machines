@@ -17,6 +17,12 @@ def printZPL():
 @label_writer_450.route("/printZPLList", methods=["POST", "OPTIONS"])
 @libs.cors.crossdomain(origin="*")
 def printZPLList():
-    zplList = request.get_json()
+    try:
+        zplList = request.get_json()
 
-    return jsonify(zplList)
+        # raise Exception("ERRORE NELLA STAMPA")
+        return jsonify(zplList)
+    except Exception as e:
+        response = jsonify({"message": str(e)})
+        response.status_code = 500
+        return response
