@@ -1,7 +1,17 @@
+import os, tempfile
+from subprocess import call
+
 from flask import request, make_response, jsonify
 
 import libs
 from . import label_writer_450
+
+
+def saveZPL(body):
+    fd, path = tempfile.mkstemp()
+    with os.fdopen(fd, "w") as tmp:
+        tmp.write(body)
+    return path
 
 
 @label_writer_450.route("/printZPL", methods=["POST", "OPTIONS"])
@@ -17,8 +27,14 @@ def printZPL():
 @label_writer_450.route("/printZPLList", methods=["POST", "OPTIONS"])
 @libs.cors.crossdomain(origin="*")
 def printZPLList():
+    """
+    notepad /pt "zpl.txt" "BARTZEBRA"
+    """
     try:
         zplList = request.get_json()
+        for zpl in zplList:
+            fName = saveZPL(zpl["zpl"])
+            call(["notepad", "/pt", fName, "BARTZEBRA"])
 
         # raise Exception("ERRORE NELLA STAMPA")
         return jsonify(zplList)
