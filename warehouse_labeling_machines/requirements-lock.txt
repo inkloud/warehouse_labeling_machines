@@ -42,3 +42,4 @@ Werkzeug==2.0.1
 Whoosh==2.7.4
 XlsxWriter==1.4.3
 zeep==4.0.0
+PyPDF2==1.26.0
