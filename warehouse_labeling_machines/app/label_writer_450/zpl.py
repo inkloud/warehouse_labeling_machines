@@ -34,7 +34,8 @@ def printZPLList():
         zplList = request.get_json()
         for zpl in zplList:
             fName = saveZPL(zpl["zpl"])
-            call(["notepad", "/pt", fName, "BARTZEBRA"])
+            # call(["notepad", "/pt", fName, "BARTZEBRA"])
+            call(["notepad", "/p", fName])
 
         # raise Exception("ERRORE NELLA STAMPA")
         return jsonify(zplList)
