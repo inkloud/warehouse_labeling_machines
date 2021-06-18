@@ -1,5 +1,4 @@
 import os, tempfile
-from subprocess import call
 
 from flask import request, make_response, jsonify
 
@@ -34,8 +33,7 @@ def printZPLList():
         zplList = request.get_json()
         for zpl in zplList:
             fName = saveZPL(zpl["zpl"])
-            # call(["notepad", "/pt", fName, "BARTZEBRA"])
-            call(["notepad", "/p", fName])
+            os.system(f'notepad /pt "{fName}" "BARTZEBRA"')
 
         # raise Exception("ERRORE NELLA STAMPA")
         return jsonify(zplList)

@@ -1,5 +1,4 @@
 import os, tempfile
-from subprocess import call
 
 """
 Use this script to test how to print a ZPL file list
@@ -23,5 +22,4 @@ def saveZPL(body):
 if __name__ == "__main__":
     for zpl in ZPL_LIST:
         fName = saveZPL(zpl)
-        # call(["notepad", "/pt", fName, "BARTZEBRA"])
-        call(["notepad", "/p", fName])
+        os.system(f'notepad /pt "{fName}" "BARTZEBRA"')
