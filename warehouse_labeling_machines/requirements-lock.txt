@@ -1,8 +1,8 @@
 appdirs==1.4.4
 attrs==21.2.0
 Babel==2.9.1
-boto3==1.17.92
-botocore==1.20.92
+boto3==1.17.97
+botocore==1.20.97
 cached-property==1.5.2
 certifi==2021.5.30
 cffi==1.14.5
@@ -28,6 +28,7 @@ pycparser==2.20
 PyJWT==2.1.0
 PyMySQL==1.0.2
 pyOpenSSL==20.0.1
+PyPDF2==1.26.0
 python-dateutil==2.8.1
 python-tds==1.11.0
 pytz==2021.1
@@ -35,11 +36,10 @@ requests==2.25.1
 requests-file==1.5.1
 requests-toolbelt==0.9.1
 s3transfer==0.4.2
-schwifty==2021.5.2
+schwifty==2021.6.0
 six==1.16.0
 urllib3==1.26.5
 Werkzeug==2.0.1
 Whoosh==2.7.4
 XlsxWriter==1.4.3
 zeep==4.0.0
-PyPDF2==1.26.0

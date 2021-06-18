@@ -15,5 +15,6 @@ XlsxWriter
 schwifty
 Babel
 pycountry
+PyPDF2
 
 gunicorn
