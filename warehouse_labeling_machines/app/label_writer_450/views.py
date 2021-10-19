@@ -22,14 +22,14 @@ def createFile(pdfs, filename):
     merger.close()
 
 
-def printFile(filename):
+def printFile(filename, printer_name=""):
     print('---- START PRINTING ----')
-    return run([".\PDFtoPrinter.exe", filename])
+    return run([".\PDFtoPrinter.exe", filename, printer_name])
     
 @label_writer_450.route('/', methods=['GET', 'OPTIONS'])
 @libs.cors.crossdomain(origin='*')
 def index():
-    return "warehouse labeling pinter service active!!!"
+    return "warehouse labeling pinter service active (with printer name)!!!"
 
 @label_writer_450.route('/printPDF', methods=['POST', 'PUT', 'OPTIONS'])
 @libs.cors.crossdomain(origin='*')
@@ -38,6 +38,7 @@ def printPDF():
     ## save file 
     print('inizia procedura di stampa')
     data = flask.request.get_json()
+    printer = data.get("printer", "")
     labels = data['label']
     orderId = data['orderId']
     startingBox = None
@@ -63,13 +64,14 @@ def printPDF():
 
     completefile = "{}.pdf".format(orderId)
     createFile(list_filename, completefile)
-    res = printFile(completefile)
+    res = printFile(completefile, printer)
     return "ok"
     
 @label_writer_450.route('/reprintPDF', methods=['POST', 'PUT', 'OPTIONS'])
 @libs.cors.crossdomain(origin='*')
 def reprintPDF():
     data = flask.request.get_json()
+    printer = data.get("printer", "")
     orderId = data['orderId']
 
     rootdir = "."
@@ -86,6 +88,6 @@ def reprintPDF():
     else:
         completefile = "{}.pdf".format(orderId)
         createFile(toPrint, completefile)
-        printFile(completefile)
+        printFile(completefile, printer)
         return "ok", 200
 
