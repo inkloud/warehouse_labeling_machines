@@ -38,7 +38,8 @@ To launch the server execute ```launch_server.ps1```
 1. Download the repo
 2. launch ```.\python-3.9.4-embed-amd64\python.exe .\python-3.9.4-embed-amd64\get-pip.py```
 3. Check the ```launch_server.ps1``` file and the correct port set 
-4. create a link of ```launcher.cmd``` and put it in the folder ```C:\Users\{username}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup```. This guarantee that the printer is launching at the pc reboot
+4. Install mkcert (PowerShell administrator),  run ``` mkcert --install ``` ,go to  ```.\warehouse_labeling_machines``` and run ``` mkcert localhost ```
+5. create a link of ```launcher.cmd``` and put it in the folder ```C:\Users\{username}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup```. This guarantee that the printer is launching at the pc reboot
 
 ##### Useful for deployment
 chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
