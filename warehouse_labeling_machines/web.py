@@ -19,7 +19,7 @@ app.register_blueprint(label_writer_450, url_prefix='/label_writer_450')
 
 
 if __name__ == "__main__":
-    app.run(port=sys.argv[1])
+    app.run(port=sys.argv[1], ssl_context=("localhost.pem", "localhost-key.pem"))
 
 
 
