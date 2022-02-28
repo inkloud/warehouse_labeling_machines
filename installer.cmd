@@ -1,0 +1,2 @@
+PowerShell -Command "Set-ExecutionPolicy Unrestricted" >> "%TEMP%\StartupLog.txt" 2>&1
+PowerShell  -Command "Start-Process PowerShell -Verb RunAs  -WorkingDirectory (Get-Location) -ArgumentList '.\installer.ps1'"  
