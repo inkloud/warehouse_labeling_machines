@@ -1,6 +1,10 @@
-Get-ChildItem ./ | Where{$_.LastWriteTime -lt (Get-Date).AddDays(-3) }  | Where {$_.Name -match '.*parcel.*.pdf'} | ForEach-Object { Remove-Item -LiteralPath $_.Name }
-#python3 -m venv ENV
-#ENV\Scripts\activate
+$file = Get-ChildItem ./ | Where{$_.LastWriteTime -lt (Get-Date).AddDays(-30) }  | Where {$_.Name -match '.key'}
+If($file -eq $null) {
+    echo "CA already in use"
+} Else {
+    mkcert localhost
+    mkcert -install
+}
 ..\python-3.9.4-embed-amd64\Scripts\pip3 install -r .\requirements-lock.txt
 $Env:FLASK_APP="web.py" 
 $Env:FLASK_DEBUG=1
