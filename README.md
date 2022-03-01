@@ -46,4 +46,4 @@ chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
 Set-ExecutionPolicy unrestricted
 
 #### NB 
-New script for deployment with https protocol. Pay attention that CA certificate are valid for 20 years
+New script for deployment with https protocol. 
