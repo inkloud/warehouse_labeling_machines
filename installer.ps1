@@ -14,7 +14,7 @@ mkcert -install
 cd ..
 
 # set correctly the project
-#.\python-3.9.4-embed-amd64\python.exe .\python-3.9.4-embed-amd64\get-pip.py
+.\python-3.9.4-embed-amd64\python.exe .\python-3.9.4-embed-amd64\get-pip.py
 
 # create a start up script link
 # put in the correct folder for launch application on start up
