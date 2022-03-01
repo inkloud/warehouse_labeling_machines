@@ -1,9 +1,10 @@
-$file = Get-ChildItem ./ | Where{$_.LastWriteTime -lt (Get-Date).AddDays(-30) }  | Where {$_.Name -match '.key'}
+$file = Get-ChildItem ./ | Where{$_.LastWriteTime -gt (Get-Date).AddDays(-30) }  | Where {$_.Name -match '.pem'}
+
 If($file -eq $null) {
-    echo "CA already in use"
-} Else {
     mkcert localhost
     mkcert -install
+} Else {
+    echo "CA already validate"
 }
 ..\python-3.9.4-embed-amd64\Scripts\pip3 install -r .\requirements-lock.txt
 $Env:FLASK_APP="web.py" 

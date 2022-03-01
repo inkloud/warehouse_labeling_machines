@@ -8,8 +8,10 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install mkcert
 
 # create tls certificates
+cd warehouse_labeling_machines
 mkcert localhost 
 mkcert -install 
+cd ..
 
 # set correctly the project
 #.\python-3.9.4-embed-amd64\python.exe .\python-3.9.4-embed-amd64\get-pip.py
@@ -21,5 +23,6 @@ $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("C:\Users\$user\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\warehouse_labeling_machines_laucher.lnk")
 $Shortcut.TargetPath = "$curdir\warehouse_labeling_machines\launcher.cmd"
 $Shortcut.WorkingDirectory = "$curdir\warehouse_labeling_machines"
+echo $Shortcut.WorkingDirectory
 echo $Shortcut.TargetPath
 $Shortcut.Save()
