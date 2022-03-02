@@ -1,8 +1,7 @@
 $file = Get-ChildItem ./ | Where{$_.LastWriteTime -gt (Get-Date).AddDays(-30) }  | Where {$_.Name -match '.pem'}
 
 If($file -eq $null) {
-    mkcert localhost
-    mkcert -install
+    mkcert -install localhost 127.0.0.1
 } Else {
     echo "CA already validate"
 }

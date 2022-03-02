@@ -9,8 +9,7 @@ choco install mkcert
 
 # create tls certificates
 cd warehouse_labeling_machines
-mkcert localhost 
-mkcert -install 
+mkcert -install localhost 127.0.0.1
 cd ..
 
 # set correctly the project
