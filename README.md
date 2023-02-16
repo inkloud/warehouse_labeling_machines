@@ -39,6 +39,17 @@ To launch the server execute ```launch_server.ps1```
 2. double click on installer.cmd and say yes on open admin console
 3. restart the pc and see the service active using https://localhost:5001/label_writer_450/
 
+
+### Printer configuration
+
+1. After installation of Zebra printer with default driver, manually add a printer with driver Generic-Text Only in the same port of Zebra Printer
+2. Change paper format to:
+    Width: 6inch
+    Height: 4inch
+3. In Printer Properties in Windows set:
+    Orientation: Orizontal
+
+
 ##### Useful for deployment
 chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
 Set-ExecutionPolicy unrestricted
