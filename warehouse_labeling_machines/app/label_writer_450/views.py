@@ -50,12 +50,15 @@ def printPDF():
     startingBox = None
     if "startingBox" in data:
         startingBox = data["startingBox"]
+    stream = "stream"
+    if "stream" in data:
+        stream = data["stream"]
     list_filename = []
 
     ### save files
     for l in range(0, len(labels)):
         print("Salva etichetta")
-        b64 = labels[l]["stream"]
+        b64 = labels[l][stream]
         binary = b64decode(b64, validate=True)
         boxToPrint = l
         if startingBox is not None:
