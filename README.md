@@ -38,25 +38,26 @@ Body:
 5.	Restart PC
 6.	Go inside documents folder, then right click, select “git Bash Here”  (on windows11 click “show all options” to find “git Bash Here” option
     Copy and execute in above shell:   
-``` 	git clone https://github.com/inkloud/warehouse_labeling_machines.git ```
+``` git clone https://github.com/inkloud/warehouse_labeling_machines.git ```
 
 7.	Explore inside “warehouse_labeling_machines” folder
-8.	double click on installer.cmd (rus as PowerShell) and say yes on open admin console
+8.	click on installer.cmd (rus as PowerShell as Administrator) and say yes on opened admin console
 9.	restart the pc and see the service active using https://localhost:5001/label_writer_450/
 
 
 ##### Useful for deployment
 CHROME ICON LINK, Right click and push PROPERTIES, change path as below
 
-``` 	<local path>/chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security Set-ExecutionPolicy unrestricted  ```
+``` <local path>/chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security Set-ExecutionPolicy unrestricted  ```
 
-Example:
+Example of property link:
 
-``` 	“C:\Program Files\Google\Chrome\Application\chrome.exe” “https:\\it2.life365.eu/api/parcel-forwarder/“ “http://localhost:8090/“ —user-data-dir=“C:/Chrom dev session” —disable-web-security   ```
+``` "C:\Program Files\Google\Chrome\Application\chrome.exe" "https:\\it2.life365.eu/api/parcel-forwarder/" "http://localhost:8090/" --user-data-dir="C:/tmp” --disable-web-security   ```
 
 
 ### Launch
 To launch the server execute ```launch_server.ps1```
+
 
 ### Deployment 
 
@@ -73,5 +74,3 @@ To launch the server execute ```launch_server.ps1```
     Height: 4inch
 3. In Printer Properties in Windows set:
     Orientation: Orizontal
-
-
