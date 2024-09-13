@@ -47,8 +47,9 @@ Body:
 
 ##### Useful for deployment
 CHROME ICON LINK, Right click and push PROPERTIES, change path as below
-......./chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security Set-ExecutionPolicy unrestricted
-
+``` 	<local path>/chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security Set-ExecutionPolicy unrestricted  ```
+Example:
+``` 	“C:\Program Files\Google\Chrome\Application\chrome.exe” “https:\\it2.life365.eu/api/parcel-forwarder/“ “http://localhost:8090/“ —user-data-dir=“C:/Chrom dev session” —disable-web-security   ```
 
 ### Launch
 To launch the server execute ```launch_server.ps1```
@@ -68,5 +69,4 @@ To launch the server execute ```launch_server.ps1```
     Height: 4inch
 3. In Printer Properties in Windows set:
     Orientation: Orizontal
-
 
