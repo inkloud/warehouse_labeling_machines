@@ -52,7 +52,7 @@ CHROME ICON LINK, Right click and push PROPERTIES, change path as below
 
 Example of property link:
 
-``` "C:\Program Files\Google\Chrome\Application\chrome.exe" "https:\\it2.life365.eu/api/parcel-forwarder/" "http://localhost:8090/" --user-data-dir="C:/tmp" --disable-web-security Set-ExecutionPolicy unrestricted   ```
+``` "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://it2.life365.eu/api/parcel-forwarder/" "http://localhost:8090/" --user-data-dir="C:/tmp" --disable-web-security Set-ExecutionPolicy unrestricted   ```
 
 
 ### Launch
