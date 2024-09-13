@@ -37,11 +37,17 @@ Body:
 4.	Install Python installer for Windows (64 bit)
 5.	Restart PC
 6.	Go inside documents folder, then right click, select “git Bash Here”  (on windows11 click “show all options” to find “git Bash Here” option
-    Copy and paste in above shell:   git clone https://github.com/inkloud/warehouse_labeling_machines.git and press RETURN
+    Copy and execute in above shell:   
+``` 	git clone https://github.com/inkloud/warehouse_labeling_machines.git ```
+
 7.	Explore inside “warehouse_labeling_machines” folder
 8.	double click on installer.cmd (rus as PowerShell) and say yes on open admin console
 9.	restart the pc and see the service active using https://localhost:5001/label_writer_450/
 
+
+##### Useful for deployment
+CHROME ICON LINK, Right click and push PROPERTIES, change path as below
+......./chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security Set-ExecutionPolicy unrestricted
 
 
 ### Launch
@@ -64,9 +70,3 @@ To launch the server execute ```launch_server.ps1```
     Orientation: Orizontal
 
 
-##### Useful for deployment
-CHROME ICON LINK, Right click and push PROPERTIES, change path as below
-......./chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security Set-ExecutionPolicy unrestricted
-
-#### NB 
-New script for deployment with https protocol. 
