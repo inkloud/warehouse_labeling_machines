@@ -5,8 +5,21 @@ If($file -eq $null) {
 } Else {
     echo "CA already validate"
 }
-..\python-3.9.4-embed-amd64\Scripts\pip3 install -r .\requirements-lock.txt
-$Env:FLASK_APP="web.py" 
-$Env:FLASK_DEBUG=1
-#flask run --host=0.0.0.0
-..\python-3.9.4-embed-amd64\python.exe .\web.py 5001
+
+python -m venv .venv
+
+$VenvPython = ".\.venv\Scripts\python.exe"
+$VenvPip    = ".\.venv\Scripts\pip.exe"
+
+# Aggiorna pip
+& $VenvPython -m pip install --upgrade pip
+
+# Installa dipendenze
+& $VenvPip install -r .\requirements-lock.txt
+
+# Variabili ambiente Flask
+$Env:FLASK_APP = "web.py"
+$Env:FLASK_DEBUG = 1
+
+# Avvio app
+& $VenvPython .\web.py 5001
